@@ -7,7 +7,12 @@ Rails.application.routes.draw do
 
       resources :users, param: :_username
       post '/auth/login', to: 'authentication#login'
-      get '/*a', to: 'application#not_found'
+      get '/users', to: 'users#index'
+
+      get  '/repositories', to: 'repositories#index'
+      post '/repositories', to: 'repositories#create'
+      
+      post '/tags', to: 'tags#create'
 
     end  
   end
