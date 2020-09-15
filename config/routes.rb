@@ -11,6 +11,7 @@ Rails.application.routes.draw do
 
       get  '/repositories', to: 'repositories#index'
       post '/repositories', to: 'repositories#create'
+      get  '/repositories/search_by_tag/:tag', to: 'repositories#search_by_tag'
       
       post '/tags', to: 'tags#create'
 
