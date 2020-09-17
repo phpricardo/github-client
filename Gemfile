@@ -12,6 +12,7 @@ gem 'jwt'
 
 # A simple HTTP and REST client for Ruby.
 gem 'rest-client'
+gem 'pg_search'
 
 gem 'bootsnap', '>= 1.4.2', require: false
 

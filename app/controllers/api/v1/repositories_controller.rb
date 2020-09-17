@@ -18,6 +18,12 @@ class Api::V1::RepositoriesController < ApplicationController
     end
   end
 
+  # GET /repositories/search_by_tag/:tag
+  def search_by_tag
+    @tags = Tag.search_repositories_by_tag(params[:tag])
+    render status: :ok
+  end
+
   private
 
   def repository_params
