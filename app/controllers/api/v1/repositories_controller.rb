@@ -20,11 +20,8 @@ class Api::V1::RepositoriesController < ApplicationController
 
   # GET /repositories/search_by_tag/:tag
   def search_by_tag
-    if params[:tag].present?
-      @repositories = Tag.search_repositories_by_tag(params[:tag])
-      
-      render status: :ok
-    end
+    @tags = Tag.search_repositories_by_tag(params[:tag])
+    render status: :ok
   end
 
   private
